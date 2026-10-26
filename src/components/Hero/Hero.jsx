@@ -2,13 +2,13 @@ import './Hero.css';
 
 export default function Hero() {
   return (
-    <section id="hero" className="hero">
+    <section id="inicio" className="hero">
       <div className="hero-container">
         
         {/* Badge interactivo como ancla */}
-        <a href="#anteproyecto" className="hero-badge">
+        <a href="#porque-un-consejo" className="hero-badge">
           <span className="badge-dot"></span>
-          Anteproyecto de Ley en marcha
+          Potenciá la profesión
           <span className="badge-arrow">→</span>
         </a>
 
@@ -23,8 +23,8 @@ export default function Hero() {
 
         {/* Acciones principales */}
         <div className="hero-actions">
-          <a href="#contact" className="btn-primary">Sumate a la iniciativa</a>
-          <a href="#anteproyecto" className="btn-secondary">Conocé el Anteproyecto</a>
+          <a href="#contacto" className="btn-primary">Sumate a la iniciativa</a>
+          <a href="#porque-un-consejo" className="btn-secondary">¿Por qué un Consejo?</a>
         </div>
 
         {/* Banner horizontal full-width */}

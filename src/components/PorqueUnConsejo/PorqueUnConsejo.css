@@ -1,0 +1,119 @@
+.benefits-section {
+  background-color: var(--bg-dark, #020b18);
+  padding: 5rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.benefits-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Encabezado */
+.benefits-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-badge {
+  display: inline-block;
+  color: #84C225;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+.benefits-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+
+.benefits-intro {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #a0aab5;
+}
+
+.benefits-intro strong {
+  color: #ffffff;
+}
+
+/* Grilla Responsiva */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Tarjetas */
+.benefit-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(132, 194, 37, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.benefit-card:hover {
+  background: rgba(132, 194, 37, 0.04);
+  border-color: #84C225;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4),
+              0 0 20px rgba(132, 194, 37, 0.15);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.card-number {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #84C225;
+  opacity: 0.8;
+}
+
+.card-tag {
+  background-color: rgba(132, 194, 37, 0.1);
+  color: #84C225;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+.card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.card-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #a0aab5;
+}

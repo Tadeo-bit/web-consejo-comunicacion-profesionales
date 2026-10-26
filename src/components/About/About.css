@@ -1,0 +1,71 @@
+/* Contenedor principal de la sección */
+.about-section {
+  width: 100%;
+  background-color: #020b18; /* Fondo oscuro institucional */
+  padding: 4rem 2rem 6rem 2rem; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* 1. Línea divisoria superior de borde a borde */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+  /* 2. Compensación para que el Navbar no tape el H1 al hacer click */
+  scroll-margin-top: 80px;
+}
+
+/* Contenedor interno para limitar el ancho y centrar el bloque */
+.about-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center; /* Centra H1 y Párrafo */
+}
+
+/* Estilos del H1 */
+.about-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff; 
+  margin: 0 auto 1.5rem auto;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Subrayado de acento verde centrado */
+.about-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #84C225; /* Verde acento */
+  margin: 0.5rem auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Estilos del Párrafo centrado */
+.about-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #a0aab5; /* Texto mutado */
+  text-align: center;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 3rem 1.5rem 4rem 1.5rem;
+    scroll-margin-top: 70px; /* Ajuste del scroll en móviles */
+  }
+  
+  .about-title {
+    font-size: 2rem;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+  }
+}

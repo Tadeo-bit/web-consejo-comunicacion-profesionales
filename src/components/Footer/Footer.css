@@ -1,0 +1,147 @@
+.footer-section {
+  background-color: var(--bg-dark, #020b18);
+  padding: 4rem 1.5rem 2rem 1.5rem;
+  /* Borde superior divisor */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Grilla Principal alineada al tope */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1.2fr;
+    gap: 3rem;
+  }
+}
+
+/* Columna 1: Branding */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-height: 42px; /* Muestra el logo y texto en bloque de 42px */
+}
+
+.footer-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.footer-brand-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.footer-brand-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #a0aab5;
+  max-width: 380px;
+}
+
+/* Columnas 2 y 3: Títulos e Ítems */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Alineación exacta con la columna de la marca */
+.footer-col-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
+  min-height: 42px; /* Iguala la altura del logo (42px) */
+  display: flex;
+  align-items: center; /* Alinea los textos en el mismo eje horizontal */
+}
+
+.footer-links,
+.footer-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links a,
+.footer-contact-list a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #a0aab5;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-contact-list a:hover {
+  color: #84C225;
+}
+
+.footer-contact-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #a0aab5;
+}
+
+/* Barra Inferior (Copyright + Créditos) */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.footer-copyright {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.825rem;
+  color: #6c7a89;
+}
+
+.footer-developer {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.825rem;
+  color: #6c7a89;
+}
+
+.developer-name {
+  color: #84C225;
+  font-weight: 600;
+}

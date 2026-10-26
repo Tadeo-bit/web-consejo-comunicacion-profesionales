@@ -1,0 +1,131 @@
+.contact-section {
+  background-color: var(--bg-dark, #020b18);
+  padding: 5rem 1.5rem;
+  /* Mantenemos el divisor estándar */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Encabezado */
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.contact-intro {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #a0aab5;
+}
+
+/* Formulario */
+.contact-form {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .form-group-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e0e6ed;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.98rem;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #6c7a89;
+}
+
+.form-group select option {
+  background-color: #020b18;
+  color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #84C225;
+  background: rgba(132, 194, 37, 0.03);
+  box-shadow: 0 0 10px rgba(132, 194, 37, 0.2);
+}
+
+.submit-btn {
+  background-color: #84C225;
+  color: #020b18;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  background-color: #92d52a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(132, 194, 37, 0.3);
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem;
+  }
+  .submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

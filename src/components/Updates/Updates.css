@@ -1,0 +1,120 @@
+.updates-section {
+  background-color: var(--bg-dark, #020b18);
+  padding: 5rem 1.5rem;
+  /* Línea divisoria consistente con las otras secciones */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.updates-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Encabezado */
+.updates-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.updates-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.updates-intro {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #a0aab5;
+}
+
+/* Grilla de Redes */
+.social-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .social-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tarjeta / Enlace */
+.social-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.social-card:hover {
+  background: rgba(132, 194, 37, 0.05);
+  border-color: #84C225;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3),
+              0 0 15px rgba(132, 194, 37, 0.15);
+}
+
+.social-icon-wrapper {
+  color: #84C225;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: rgba(132, 194, 37, 0.1);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-card:hover .social-icon-wrapper {
+  transform: scale(1.1);
+}
+
+.social-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.social-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.social-user {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #a0aab5;
+  word-break: break-word;
+}
+
+.social-arrow {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: #84C225;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.social-card:hover .social-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
