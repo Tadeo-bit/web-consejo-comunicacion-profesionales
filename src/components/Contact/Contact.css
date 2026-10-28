@@ -1,11 +1,20 @@
+/* Reset local para garantizar el cálculo exacto de cajas */
+.contact-section,
+.contact-section * {
+  box-sizing: border-box;
+}
+
 .contact-section {
   background-color: var(--bg-dark, #020b18);
   padding: 5rem 1.5rem;
   /* Mantenemos el divisor estándar */
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+  /* Compensación para el Navbar sticky al navegar con anclas */
+  scroll-margin-top: 80px;
 }
 
 .contact-container {
+  width: 100%;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -33,6 +42,7 @@
 
 /* Formulario */
 .contact-form {
+  width: 100%;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
@@ -43,6 +53,7 @@
 }
 
 .form-group-row {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
@@ -55,6 +66,8 @@
 }
 
 .form-group {
+  width: 100%;
+  min-width: 0; /* Previene que los elementos hijos de la grilla desborden el contenedor */
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -70,6 +83,8 @@
 .form-group input,
 .form-group select,
 .form-group textarea {
+  width: 100%;
+  max-width: 100%;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
@@ -79,6 +94,7 @@
   color: #ffffff;
   transition: all 0.3s ease;
   outline: none;
+  box-sizing: border-box;
 }
 
 .form-group input::placeholder,
@@ -112,6 +128,7 @@
   transition: all 0.3s ease;
   margin-top: 1rem;
   align-self: flex-start;
+  box-sizing: border-box;
 }
 
 .submit-btn:hover {
@@ -121,9 +138,22 @@
 }
 
 @media (max-width: 768px) {
-  .contact-form {
-    padding: 1.5rem;
+  .contact-section {
+    padding: 3.5rem 1rem;
+    scroll-margin-top: 70px;
   }
+
+  .contact-form {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Font-size en 16px exactos evita auto-zoom y desfasajes en Safari/Chrome mobile */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px;
+  }
+
   .submit-btn {
     width: 100%;
     text-align: center;
