@@ -6,9 +6,6 @@
     <a href="https://consejo-profesionales-comunicacion-cba.vercel.app/" target="_blank">
       <img src="https://img.shields.io/badge/Sitio_Web-En_Vivo-84C225?style=for-the-badge&logo=vercel&logoColor=white" alt="Sitio Web En Vivo" />
     </a>
-    <a href="https://github.com/Tadeo-bit/web-consejo-comunicacion-profesionales" target="_blank">
-      <img src="https://img.shields.io/badge/GitHub-Repositorio-020b18?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo" />
-    </a>
   </p>
 </div>
 
