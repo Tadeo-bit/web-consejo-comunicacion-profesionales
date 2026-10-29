@@ -1,6 +1,6 @@
 <div align="center">
   <h1>🏛️ Consejo de Profesionales de la Comunicación de Córdoba</h1>
-  <p>Landing page institucional desarrollada para brindar legitimidad, comunicar los beneficios de la jerarquización profesional y facilitar un canal directo de contacto para la matriculación de comunicadores en la Provincia de Córdoba.</p>
+  <p>Landing page institucional desarrollada para brindar legitimidad, comunicar los beneficios de la jerarquización profesional y facilitar un canal directo de contacto para comunicadores en la Provincia de Córdoba.</p>
 
   <p>
     <a href="https://consejo-profesionales-comunicacion-cba.vercel.app/" target="_blank">
