@@ -1,78 +1,85 @@
-# React + TypeScript + Vite
+# 🏛️ Consejo de Profesionales de la Comunicación de Córdoba — Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page institucional desarrollada para el **Consejo de Profesionales de la Comunicación de Córdoba**. El proyecto tiene como objetivo principal brindar legitimidad, comunicar los beneficios de la jerarquización profesional y facilitar un canal directo de contacto para la matriculación y sumatoria de profesionales en la provincia.
 
-Currently, two official plugins are available:
+🌐 **Sitio Web en Vivo:** [consejo-profesionales-comunicacion-cba.vercel.app](https://consejo-profesionales-comunicacion-cba.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Tecnologías Utilizadas
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **[React](https://reactjs.org/):** Librería para la construcción de la interfaz de usuario modular y reutilizable.
+- **[Vite](https://vitejs.dev/):** Entorno de desarrollo rápido y empaquetador optimizado para producción.
+- **CSS3 Puro:** Variables CSS, Flexbox, CSS Grid y diseño totalmente responsivo sin dependencias externas.
+- **[FormSubmit](https://formsubmit.co/):** Integración serverless para el procesamiento de consultas por correo electrónico (`cordobacomunicadores@gmail.com`).
+- **[Vercel](https://vercel.com/):** Plataforma de hosting y despliegue continuo vinculada al repositorio de GitHub.
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+---
 
-## Expanding the ESLint configuration
+## 🎨 Identidad Visual y UI/UX
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Color de Fondo Principal:** `#020b18` (Azul oscuro institucional)
+- **Color de Acento:** `#84C225` (Verde vibrante)
+- **Tipografías:** `Montserrat` (encabezados y títulos) e `Inter` (cuerpo de texto y párrafos)
+- **Navegación:** Anclas suaves con compensación de altura (`scroll-margin-top`) para la cabecera fija.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📁 Estructura del Proyecto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+/
+├── public/
+│   ├── perfil-consejo.png      # Isotipo / Logo institucional
+│   └── banner-consejo.png      # Banner principal del Hero
+├── src/
+│   ├── components/
+│   │   ├── Navbar/            # Menú navegable y responsive
+│   │   ├── Hero/              # Sección de impacto principal
+│   │   ├── About/             # Sección "Quiénes Somos"
+│   │   ├── PorqueUnConsejo/   # Grilla de beneficios e impacto
+│   │   ├── Updates/           # Novedades y redes sociales
+│   │   ├── Contact/           # Formulario funcional de contacto
+│   │   └── Footer/            # Enlaces, derechos y marca
+│   ├── App.jsx                # Componente principal
+│   ├── index.css              # Estilos globales y variables
+│   └── main.jsx               # Punto de entrada de React
+├── package.json
+└── README.md
+⚙️ Instalación y Ejecución Local
+Para ejecutar este proyecto en tu entorno local:
 
-```
+Clonar el repositorio:
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Bash
+git clone [https://github.com/Tadeo-bit/web-consejo-comunicacion-profesionales.git](https://github.com/Tadeo-bit/web-consejo-comunicacion-profesionales.git)
+Navegar al directorio del proyecto:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Bash
+cd web-consejo-comunicacion-profesionales
+Instalar dependencias:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Bash
+npm install
+Iniciar el servidor de desarrollo:
 
-```
+Bash
+npm run dev
+Abrí tu navegador e ingresá a http://localhost:5173.
+
+📦 Despliegue en Producción
+El proyecto cuenta con integración continua vinculada a Vercel desde la rama main. Cada commit enviado a la rama principal dispara automáticamente una nueva versión en producción.
+
+Para generar una compilación de producción manualmente:
+
+Bash
+npm run build
+📩 Configuración del Formulario de Contacto
+El formulario envía las consultas a cordobacomunicadores@gmail.com mediante FormSubmit.
+
+Activación: La primera vez que se envía un correo desde un dominio nuevo, FormSubmit envía un email de confirmación a la casilla de destino. Es necesario abrir dicho correo y hacer clic en "Activate Form" para comenzar a recibir mensajes.
+
+✒️ Créditos y Desarrollo
+Proyecto: Consejo de Profesionales de la Comunicación de Córdoba
+
+Desarrollo y Diseño Web: Tadeo Otaola
